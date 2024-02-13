@@ -4,7 +4,7 @@ import sys
 
 def main():
     args = sys.argv
-    if 2 == len(args):
+    if len(args) == 2:
         url = args[1]
         dl(url)
     else:
@@ -18,4 +18,4 @@ def dl(url):
 
 
 if __name__ == "__main__":
-    print(main())
+    main()

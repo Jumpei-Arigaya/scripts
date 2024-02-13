@@ -4,8 +4,8 @@ import os
 
 def main():
     path = os.getcwd()
-    return path
+    print(path)
 
 
 if __name__ == "__main__":
-    print(main())
+    main()
