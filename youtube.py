@@ -22,7 +22,7 @@ def dl(url):
             result = ydl.download(url)
             return result
         except Exception as e:
-            print(e)
+            print("failed downloads:", e)
 
 
 if __name__ == "__main__":
