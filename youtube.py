@@ -1,4 +1,5 @@
 from yt_dlp import YoutubeDL
+from yt_dlp.utils import ExtractorError
 import sys
 
 
@@ -12,9 +13,16 @@ def main():
 
 
 def dl(url):
-    with YoutubeDL() as ydl:
-        result = ydl.download([url])
-        return result
+    ydl_opts = {
+        "cookiesfrombrowser:": "chrome",
+    }
+
+    with YoutubeDL(ydl_opts) as ydl:
+        try:
+            result = ydl.download(url)
+            return result
+        except Exception as e:
+            print(e)
 
 
 if __name__ == "__main__":
