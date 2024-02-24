@@ -4,12 +4,9 @@ import sys
 
 
 def main():
-    args = sys.argv
-    if len(args) == 2:
-        url = args[1]
-        dl(url)
-    else:
-        print("Arguments are too short")
+    message = "ダウンロードURLを入力してください"
+    url = input(message)
+    dl(url)
 
 
 def dl(url):
